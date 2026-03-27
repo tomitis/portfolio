@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     revealEls.forEach(el => el.classList.add('reveal'));
 
-    const staggerEls = document.querySelectorAll('.skills-grid, .projects-grid, .stats-grid');
+    const staggerEls = document.querySelectorAll('.skills-grid, .projects-grid, .stats-grid, .competencies-strip');
     staggerEls.forEach(el => el.classList.add('stagger-children'));
 
     const observer = new IntersectionObserver(
@@ -108,11 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const typedEl = document.getElementById('typed-text');
     if (typedEl) {
         const phrases = [
-            'SDET | 4+ Years Experience',
-            'Cypress & Selenium Expert',
-            'CI/CD & DevOps Enthusiast',
-            'Shift-Left Testing Advocate',
-            'API Testing with REST Assured',
+            'SDET | 4+ Years across 3 Domains',
+            'Building Quality at Every Layer',
+            'Cypress \u00b7 Selenium \u00b7 REST Assured',
+            'CI/CD Pipeline Architect',
+            '1000+ Test Cases Automated & Counting',
+            'From Unit Tests to E2E \u2014 Full Stack QA',
             'Quality is not an act, it\'s a habit',
         ];
         let phraseIdx = 0, charIdx = 0, isDeleting = false;

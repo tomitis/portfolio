@@ -716,6 +716,61 @@ ul { list-style: none; }
     box-shadow: 0 6px 20px rgba(var(--color-primary-rgb), 0.2);
 }
 
+/* ---------- About Highlight ---------- */
+.about-highlight {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.05rem;
+    margin-top: 0.5rem;
+}
+
+/* ---------- Competencies Strip ---------- */
+.competencies-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.competency-tag {
+    background: rgba(var(--color-primary-rgb), 0.1);
+    color: var(--color-primary);
+    border: 1px solid rgba(var(--color-primary-rgb), 0.2);
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all var(--transition);
+    cursor: default;
+}
+
+.competency-tag:hover {
+    background: rgba(var(--color-primary-rgb), 0.2);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.15);
+}
+
+/* ---------- Education Note ---------- */
+.edu-note {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-top: 0.3rem;
+}
+
+/* ---------- Footer Tagline ---------- */
+.footer-tagline {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
 /* ---------- Footer ---------- */
 footer {
     padding: 3rem 0 2rem; text-align: center;
@@ -810,6 +865,9 @@ footer {
 
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .stat-number { font-size: 2rem; }
+
+    .competencies-strip { gap: 0.5rem; margin-top: 2rem; padding-top: 2rem; }
+    .competency-tag { font-size: 0.78rem; padding: 0.4rem 0.9rem; }
 
     .skills-grid { grid-template-columns: 1fr 1fr; }
 
