@@ -505,17 +505,6 @@ ul { list-style: none; }
 }
 .image-wrapper:hover img { filter: grayscale(0%); }
 
-.image-border {
-    position: absolute; inset: 0;
-    border: 2px solid var(--color-primary); border-radius: 14px;
-    z-index: 1;
-    transition: all var(--transition);
-}
-.image-wrapper:hover .image-border {
-    inset: 0;
-    border-color: var(--color-secondary);
-}
-
 .about-text p { margin-bottom: 1rem; color: var(--color-text); line-height: 1.8; }
 
 .about-details {
@@ -529,7 +518,7 @@ ul { list-style: none; }
 .linkedin-icon { margin-right: 0.5rem; }
 .copy-btn {
     margin-left: 0.5rem; background: none; border: none; cursor: pointer;
-    color: var(--color-text-muted); opacity: 0.7; transition: opacity var(--transition);
+    color: var(--color-text); opacity: 0.8; transition: opacity var(--transition);
 }
 .copy-btn:hover { opacity: 1; }
 .about-details strong { color: var(--color-heading); }
@@ -1030,7 +1019,6 @@ footer {
     .about-grid { grid-template-columns: 1fr; text-align: center; }
     .about-image { width: 100%; margin: 0; }
     .about-details { align-items: center; }
-    .image-border { inset: 0; }
 
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .stat-number { font-size: 2rem; }
