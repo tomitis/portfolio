@@ -611,7 +611,7 @@ ul { list-style: none; }
 
 /* ---------- Timeline ---------- */
 .timeline {
-    position: relative; max-width: 720px;
+    position: relative; max-width: 100%;
     margin: 0 auto; padding-left: 2.5rem;
 }
 .timeline::before {
