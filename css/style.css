@@ -52,6 +52,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    width: 100%;
 }
 
 body {
@@ -62,6 +63,7 @@ body {
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     transition: background 0.4s ease, color 0.4s ease;
+    width: 100%;
 }
 
 a { color: var(--color-primary); text-decoration: none; transition: color var(--transition); }
@@ -70,7 +72,7 @@ img { max-width: 100%; display: block; }
 ul { list-style: none; }
 ::selection { background: rgba(var(--color-primary-rgb), 0.3); color: var(--color-heading); }
 
-.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem; box-sizing: border-box; width: 100%; overflow: hidden; }
 
 /* ---------- Scroll Progress ---------- */
 #scroll-progress {
@@ -214,7 +216,7 @@ ul { list-style: none; }
 .nav-container {
     max-width: var(--max-width); margin: 0 auto; padding: 0 1.5rem;
     display: flex; align-items: center; justify-content: space-between;
-    height: 70px;
+    height: 70px; box-sizing: border-box; width: 100%; overflow: hidden;
 }
 
 .logo {
@@ -499,10 +501,12 @@ ul { list-style: none; }
 .about-grid {
     display: grid; grid-template-columns: 260px 1fr;
     gap: 3.5rem; align-items: start;
+    width: 100%; box-sizing: border-box;
 }
 
 .image-wrapper {
     position: relative; width: 100%; margin-top: 0.5rem;
+    box-sizing: border-box;
 }
 .image-wrapper img {
     border-radius: 14px; aspect-ratio: 1; object-fit: cover;
@@ -534,6 +538,7 @@ ul { list-style: none; }
 .stats-grid {
     display: grid; grid-template-columns: repeat(4, 1fr);
     gap: 2rem; text-align: center;
+    width: 100%; box-sizing: border-box;
 }
 .stat-card {
     padding: 2rem 1rem;
@@ -562,6 +567,7 @@ ul { list-style: none; }
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     align-items: start;
+    width: 100%; box-sizing: border-box;
 }
 
 .wide {
@@ -574,9 +580,6 @@ ul { list-style: none; }
     gap: 0.4rem;
 }
 
-.narrow {
-    /* removed translateY to keep equal distances */
-}
 .skill-category {
     padding: 2rem;
     min-height: 280px;
@@ -615,6 +618,7 @@ ul { list-style: none; }
 .timeline {
     position: relative; max-width: 100%;
     margin: 0 auto; padding-left: 2.5rem;
+    box-sizing: border-box; width: 100%;
 }
 .timeline::before {
     content: ''; position: absolute;
@@ -659,6 +663,7 @@ ul { list-style: none; }
 .projects-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 2rem;
+    width: 100%; box-sizing: border-box;
 }
 
 .project-card {
@@ -734,9 +739,9 @@ ul { list-style: none; }
     color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.8;
 }
 
-.contact-form { max-width: 100%; }
+.contact-form { max-width: 100%; width: 100%; box-sizing: border-box; }
 
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; width: 100%; box-sizing: border-box; }
 
 /* Floating labels */
 .form-group.floating { position: relative; margin-bottom: 1.5rem; }
@@ -807,6 +812,7 @@ ul { list-style: none; }
     border-top: 1px solid var(--color-border);
     justify-content: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .competency-tag {
@@ -929,6 +935,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .container { padding: 0 1.2rem; }
+    .nav-container { padding: 0 1.2rem; }
+    
     .cursor-dot, .cursor-ring { display: none; }
 
     .nav-toggle {
@@ -1051,11 +1060,14 @@ footer {
 
 @media (max-width: 480px) {
     .container { padding: 0 1rem; }
+    .nav-container { padding: 0 1rem; }
     .hero-name { font-size: 2.4rem; letter-spacing: -1px; }
     .hero-title { font-size: 1.15rem; }
     .hero-typed-wrap { font-size: 0.8rem; padding: 0.5rem 0.75rem; }
 
+    .about-grid { grid-template-columns: 1fr; }
     .skills-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
     .stat-number { font-size: 1.8rem; }
     .stats-grid { gap: 0.5rem; }
     .stat-card { padding: 1.5rem 0.5rem; }
@@ -1063,9 +1075,23 @@ footer {
     .section { padding: 3rem 0; }
 }
 
+@media (max-width: 370px) {
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .about-image { width: 100%; max-width: 100%; }
+    .image-wrapper { width: 100%; max-width: 100%; }
+    .image-wrapper img { width: 100%; }
+    .skills-grid { grid-template-columns: 1fr; width: 100%; box-sizing: border-box; overflow: hidden; }
+    .skill-category { width: 100%; box-sizing: border-box; }
+}
+
 @media (max-width: 360px) {
+    .container { padding: 0 0.75rem; }
+    .nav-container { padding: 0 0.75rem; }
     .hero-name { font-size: 2rem; }
     .stats-grid { grid-template-columns: 1fr 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; }
 }
 
 @media (hover: none) {
