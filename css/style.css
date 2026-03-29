@@ -797,16 +797,18 @@ ul { list-style: none; }
 
 /* ---------- Competencies Strip ---------- */
 .competencies-strip {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.75rem;
     margin-top: 3rem;
-    padding-top: 2.5rem;
+    padding: 2.5rem 1rem;
     border-top: 1px solid var(--color-border);
-    justify-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .competency-tag {
+    display: inline-block;
     background: rgba(var(--color-primary-rgb), 0.1);
     color: var(--color-primary);
     border: 1px solid rgba(var(--color-primary-rgb), 0.2);
@@ -816,6 +818,7 @@ ul { list-style: none; }
     font-weight: 500;
     transition: all var(--transition);
     cursor: default;
+    white-space: nowrap;
 }
 
 .competency-tag:hover {
@@ -901,6 +904,17 @@ footer {
 .stagger-children.visible > *:nth-child(3) { transition-delay: 0.15s; opacity: 1; transform: translateY(0); }
 .stagger-children.visible > *:nth-child(4) { transition-delay: 0.2s;  opacity: 1; transform: translateY(0); }
 .stagger-children.visible > *:nth-child(5) { transition-delay: 0.25s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.3s;  opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(7) { transition-delay: 0.35s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(8) { transition-delay: 0.4s;  opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(9) { transition-delay: 0.45s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(10) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(11) { transition-delay: 0.55s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(12) { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(13) { transition-delay: 0.65s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(14) { transition-delay: 0.7s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(15) { transition-delay: 0.75s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(16) { transition-delay: 0.8s; opacity: 1; transform: translateY(0); }
 .stagger-children.visible > *:nth-child(6) { transition-delay: 0.3s;  opacity: 1; transform: translateY(0); }
 
 /* ---------- Responsive ---------- */
