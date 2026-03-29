@@ -556,11 +556,29 @@ ul { list-style: none; }
 
 /* ---------- Skills ---------- */
 .skills-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
+    align-items: start;
+}
+
+.wide {
+    grid-column: span 2;
+    padding: 1.5rem;
+    min-height: 320px;
+}
+
+.wide .skill-tags {
+    gap: 0.4rem;
+}
+
+.narrow {
+    /* removed translateY to keep equal distances */
 }
 .skill-category {
     padding: 2rem;
+    min-height: 280px;
+    /* removed overflow: hidden and fixed height to allow content to be visible and tiles to grow */
 }
 .skill-icon {
     font-size: 2rem; margin-bottom: 0.75rem;
@@ -779,13 +797,13 @@ ul { list-style: none; }
 
 /* ---------- Competencies Strip ---------- */
 .competencies-strip {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 0.75rem;
     margin-top: 3rem;
     padding-top: 2.5rem;
     border-top: 1px solid var(--color-border);
+    justify-items: center;
 }
 
 .competency-tag {
