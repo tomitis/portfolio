@@ -374,6 +374,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ================================================================
+    // 12. CERTIFICATIONS SHOW MORE / SHOW LESS
+    // ================================================================
+    const certsToggleBtn = document.getElementById('certs-toggle-btn');
+    const certsExtra = document.querySelector('.certs-extra');
+
+    if (certsToggleBtn && certsExtra) {
+        certsToggleBtn.addEventListener('click', () => {
+            const isOpen = certsExtra.classList.toggle('open');
+            certsToggleBtn.classList.toggle('open', isOpen);
+            certsToggleBtn.querySelector('span').textContent = isOpen ? 'Show Less' : 'Show More';
+
+            // Trigger reveal animation for the newly shown items
+            if (isOpen) {
+                certsExtra.querySelectorAll('.timeline-item').forEach(el => {
+                    el.classList.add('visible');
+                });
+            }
+        });
+    }
+
     // Copy to clipboard function
     window.copyToClipboard = function(text) {
         navigator.clipboard.writeText(text).then(() => {
