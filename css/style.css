@@ -576,6 +576,12 @@ ul { list-style: none; }
     min-height: 320px;
 }
 
+.full-width {
+    grid-column: 1 / -1;
+    padding: 1.5rem;
+    min-height: 200px;
+}
+
 .wide .skill-tags {
     gap: 0.4rem;
 }
@@ -662,6 +668,9 @@ ul { list-style: none; }
 /* ---------- Certifications: Show More ---------- */
 .cert-badge-completed {
     color: var(--color-primary) !important;
+}
+.cert-badge-progress {
+    color: #f0a500 !important;
 }
 .cert-icon-link {
     display: inline-flex;
